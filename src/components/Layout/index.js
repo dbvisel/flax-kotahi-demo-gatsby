@@ -1,17 +1,18 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { Wrapper } from "./elements";
 
 import Header from "./../Header";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title = "" }) => {
   return (
-    <main>
-      <Header siteTitle={"Gatsby Flax demo"} />
+    <Wrapper>
+      <Header pageTitle={title} />
       <div>
         <main>{children}</main>
-        <footer>{new Date().getFullYear()}</footer>
+        <footer>footer content goes here! {new Date().getFullYear()}</footer>
       </div>
-    </main>
+    </Wrapper>
   );
 };
 

@@ -6,6 +6,18 @@ module.exports = {
     siteUrl: `https://flaxkotahidemogatsby.netlify.app/`,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: "wpdemo",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "wpdemo",
+        // Url to query from
+        url: "https://unpackinganarchive.dreamhosters.com/graphql",
+      },
+    },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

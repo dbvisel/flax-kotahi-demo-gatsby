@@ -1,15 +1,19 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import { HeaderElement } from "./elements";
 
-const Header = ({ siteTitle = "Gatsby flax demo" }) => (
-  <header>
+const Header = ({ siteTitle = "Gatsby flax demo", pageTitle = "" }) => (
+  <HeaderElement>
     <div>
       <h1>
-        <Link to="/">{siteTitle}</Link>
+        <Link to="/">{siteTitle || "Gatsby Flax demo"}</Link>
+        {": "}
+        {pageTitle}
       </h1>
+      <Link to={`/about`}>About</Link>
     </div>
-  </header>
+  </HeaderElement>
 );
 
 Header.propTypes = {

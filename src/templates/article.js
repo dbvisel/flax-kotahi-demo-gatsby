@@ -1,11 +1,10 @@
 import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-
 import Layout from "../components/Layout";
+import Article from "../components/Article";
 
 const ArticlePage = ({ data, pageContext }) => (
-  <Layout>
-    <h2>Front page</h2>
+  <Layout title={pageContext.title}>
+    <Article title={pageContext.title} content={pageContext.content} />
   </Layout>
 );
 
