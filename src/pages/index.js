@@ -3,6 +3,20 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/Layout";
 
 const IndexPage = () => {
+  const fireWebhook = () => {
+    fetch("https://api.netlify.com/build_hooks/61234a4e2d8c8275e0804bf5")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        alert(
+          `Webhook fired to rebuild the site. Here's what Netlify said:\n\n${JSON.stringify(
+            myJson
+          )}`
+        );
+      });
+  };
+
   const posts = useStaticQuery(graphql`
     {
       wpdemo {
@@ -30,9 +44,7 @@ const IndexPage = () => {
       </ul>
       <button
         onClick={() => {
-          alert(
-            "This isn't hooked up yet! This should fire a webhook to rebuild the site."
-          );
+          fireWebhook();
         }}
       >
         Rebuild?

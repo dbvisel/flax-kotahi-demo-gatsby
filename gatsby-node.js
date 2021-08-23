@@ -23,7 +23,6 @@ exports.createPages = ({ actions, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
-    console.log(result);
     return result.data.wpdemo.posts.edges.forEach(({ node }) => {
       createPage({
         path: `article/${node.slug}`,
