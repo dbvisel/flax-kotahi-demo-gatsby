@@ -15,6 +15,7 @@ Public version: https://flax-kotahi-demo-gatsby.netlify.app
 
 ## To do:
 
+- pull in a bit more metadata from WordPress
 - actually implement Pubsweet components
   - do we need to process HTML coming in?
 

@@ -121,3 +121,11 @@ ul,
 ol {
   margin: var(--insidePadding) 0;
 }
+
+p {
+  margin: 0;
+}
+
+p + p {
+  text-indent: 1em;
+}

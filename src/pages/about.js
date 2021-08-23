@@ -28,6 +28,19 @@ const AboutPage = () => (
         this probably won't do anything visible – the content on the CMS isn't
         changing.
       </p>
+      <p>Other versions:</p>
+      <ul>
+        <li>
+          <a href="https://flax-kotahi-demo.netlify.app">
+            Pure Eleventy version
+          </a>
+        </li>
+        <li>
+          <a href="https://flax-kotahi-demo-react.netlify.app">
+            Eleventy + React version
+          </a>
+        </li>
+      </ul>
     </div>
   </Layout>
 );

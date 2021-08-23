@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Dan Visel <dbvisel@gmail.com>",
   "dependencies": {
+    "@pubsweet/ui": "^12.6.15",
+    "@pubsweet/ui-toolkit": "^2.3.17",
     "gatsby": "^3.11.1",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",
     "gatsby-plugin-image": "^1.11.0",
