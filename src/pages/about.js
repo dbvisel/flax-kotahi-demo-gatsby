@@ -22,6 +22,12 @@ const AboutPage = () => (
         component libray to make sure that content appears the same on the
         Kotahi side and on the Flax side.
       </p>
+      <p>
+        If you click the button on the front page, Netlify will rebuild the
+        content on this site (builds take about a minute). Note, however, that
+        this probably won't do anything visible – the content on the CMS isn't
+        changing.
+      </p>
     </div>
   </Layout>
 );

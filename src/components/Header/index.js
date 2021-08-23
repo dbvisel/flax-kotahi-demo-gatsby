@@ -7,7 +7,7 @@ const Header = ({ siteTitle = "Gatsby flax demo", pageTitle = "" }) => (
   <HeaderElement>
     <div>
       <h1>
-        <Link to="/">{siteTitle || "Gatsby Flax demo"}</Link>
+        <Link to="/">{siteTitle || "Gatsby Flax/Kotahi demo"}</Link>
         {": "}
         {pageTitle}
       </h1>
