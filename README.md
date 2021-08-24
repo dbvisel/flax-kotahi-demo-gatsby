@@ -7,6 +7,7 @@ Public version: https://flax-kotahi-demo-gatsby.netlify.app
 ## Benefits:
 
 - this is really easy to make (Gatsby gives us GraphQL & React for free)
+- we get a client-side GraphQL playground in dev mode
 - built on React, so we can use Pubsweet component library
 
 ## Downsides

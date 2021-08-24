@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import { Button, Heading, CenteredColumn, DateParser } from "@pubsweet/ui";
 
 const IndexPage = () => {
   const fireWebhook = () => {
@@ -26,6 +27,7 @@ const IndexPage = () => {
               id
               title
               slug
+              date
             }
           }
         }
@@ -34,21 +36,30 @@ const IndexPage = () => {
   `).wpdemo.posts.edges.map((x) => x.node);
   return (
     <Layout title="main index">
-      <h2>Articles in the index:</h2>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <Link to={`article/${post.slug}`}>{post.title}</Link>
-          </li>
-        ))}
-      </ul>
-      <button
-        onClick={() => {
-          fireWebhook();
-        }}
-      >
-        Rebuild?
-      </button>
+      <CenteredColumn>
+        <Heading level={2}>Articles in the index:</Heading>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              <Link to={`article/${post.slug}`}>{post.title}</Link>{" "}
+              <DateParser timestamp={post.date} dateFormat="DD/M/YYYY">
+                {(timestamp, timeAgo) => <span>({timeAgo} ago)</span>}
+              </DateParser>
+            </li>
+          ))}
+        </ul>
+        <Button
+          primary
+          color="black"
+          background="lightblue"
+          size="large"
+          onClick={() => {
+            fireWebhook();
+          }}
+        >
+          Rebuild?
+        </Button>
+      </CenteredColumn>
     </Layout>
   );
 };

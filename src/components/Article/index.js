@@ -1,10 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { ArticleElement } from "./elements";
+import { Heading } from "@pubsweet/ui";
 
 const Article = ({ title, content }) => (
   <ArticleElement>
-    <h2>{title}</h2>
+    <Heading level={2}>{title}</Heading>
     <div dangerouslySetInnerHTML={{ __html: content }} />
   </ArticleElement>
 );
