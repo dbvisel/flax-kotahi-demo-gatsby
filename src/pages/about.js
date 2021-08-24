@@ -37,8 +37,8 @@ const AboutPage = () => (
           </a>
         </li>
         <li>
-          <a href="https://flax-kotahi-demo-react.netlify.app">
-            Eleventy + React version
+          <a href="https://flax-kotahi-demo-next.netlify.app">
+            Next.js version
           </a>
         </li>
       </ul>
