@@ -2,10 +2,11 @@ import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { Button, Heading, CenteredColumn, DateParser } from "@pubsweet/ui";
+import config from "./../../config";
 
 const IndexPage = () => {
   const fireWebhook = () => {
-    fetch("https://api.netlify.com/build_hooks/61234a4e2d8c8275e0804bf5")
+    fetch(config.webhookUrl)
       .then(function (response) {
         return response.json();
       })
@@ -34,6 +35,7 @@ const IndexPage = () => {
       }
     }
   `).wpdemo.posts.edges.map((x) => x.node);
+
   return (
     <Layout title="main index">
       <CenteredColumn>

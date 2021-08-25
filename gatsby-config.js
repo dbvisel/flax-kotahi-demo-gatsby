@@ -1,3 +1,5 @@
+const config = require("./config");
+
 module.exports = {
   siteMetadata: {
     title: `Flax demo Gatsby version`,
@@ -14,7 +16,7 @@ module.exports = {
         // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
         fieldName: "wpdemo",
         // Url to query from
-        url: "https://unpackinganarchive.dreamhosters.com/graphql",
+        url: config.url,
       },
     },
     `gatsby-plugin-styled-components`,
